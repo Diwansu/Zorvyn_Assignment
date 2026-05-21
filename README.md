@@ -66,7 +66,7 @@ cd Zorvyn_Assignment/Backend
 ### 2. Install dependencies
 
 ```bash
-npm install
+docker compose 
 ```
 
 ### 3. Create a `.env` file
