@@ -1,0 +1,17 @@
+services:
+  backend:
+    # Build configuration: points to the Backend directory and uses the Dockerfile we just created
+    build:
+      context: ./Backend
+      dockerfile: Dockerfile
+    
+    # Port mapping: maps port 3000 on your computer (host) to port 3000 inside the Docker container
+    ports:
+      - "3000:3000"
+    
+    env_file:
+      - ./Backend/.env
+
+    volumes:
+      - ./Backend:/usr/src/app
+      - /usr/src/app/node_modules
