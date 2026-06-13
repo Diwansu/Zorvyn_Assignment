@@ -26,7 +26,11 @@ export const request = async (endpoint, options = {}) => {
   }
 
   try {
-    const response = await fetch(`${API_BASE_URL}${endpoint}`, config);
+    const cleanBaseUrl = API_BASE_URL.endsWith('/') ? API_BASE_URL.slice(0, -1) : API_BASE_URL;
+    const cleanEndpoint = endpoint.startsWith('/') ? endpoint : `/${endpoint}`;
+    const url = `${cleanBaseUrl}${cleanEndpoint}`;
+    
+    const response = await fetch(url, config);
     const data = await response.json().catch(() => ({}));
 
     if (!response.ok) {
