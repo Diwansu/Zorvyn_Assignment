@@ -10,6 +10,7 @@ A backend system for a **Finance Dashboard** where different users interact with
 |---|---|
 | **Live API** | https://zorvyn-assignment-phi.vercel.app/ |
 | **GitHub Repo** | https://github.com/Diwansu/Zorvyn_Assignment |
+| **AWS** | http://a72ec80a5d34d4785b30c0da368c7c10-925013098.us-east-1.elb.amazonaws.com/| ( was deleted later)
 
 ---
 
